@@ -2370,16 +2370,19 @@ class PlayState extends MusicBeatState
 
 		if (health > 2)
 			health = 2;
-
-		if (healthBar.percent < 20)
+		if (healthBar.percent < 20){
 			iconP1.animation.curAnim.curFrame = 1;
+			iconP2.animation.curAnim.curFrame = 2;
+			}
 		else
-			iconP1.animation.curAnim.curFrame = 0;
-
-		if (healthBar.percent > 80)
+		if (healthBar.percent > 80){
 			iconP2.animation.curAnim.curFrame = 1;
-		else
+			iconP1.animation.curAnim.curFrame = 2;
+		}
+		else{
 			iconP2.animation.curAnim.curFrame = 0;
+			iconP1.animation.curAnim.curFrame = 0;
+		}
 
 		if (FlxG.keys.anyJustPressed(debugKeysCharacter) && !endingSong && !inCutscene) {
 			persistentUpdate = false;
@@ -3176,7 +3179,7 @@ class PlayState extends MusicBeatState
 		} else {
 			var achieve:String = checkForAchievement(['week1_nomiss', 'week2_nomiss', 'week3_nomiss', 'week4_nomiss',
 				'week5_nomiss', 'week6_nomiss', 'week7_nomiss', 'ur_bad',
-				'ur_good', 'hype', 'two_keys', 'toastie', 'debugger']);
+				'ur_good', 'hype', 'two_keys', 'toastie', 'debugger', 'week9_nomiss', 'week10_nomiss', 'week11_nomiss']);
 
 			if(achieve != null) {
 				startAchievement(achieve);
@@ -4442,7 +4445,7 @@ class PlayState extends MusicBeatState
 				var unlock:Bool = false;
 				switch(achievementName)
 				{
-					case 'week1_nomiss' | 'week2_nomiss' | 'week3_nomiss' | 'week4_nomiss' | 'week5_nomiss' | 'week6_nomiss' | 'week7_nomiss':
+					case 'week1_nomiss' | 'week2_nomiss' | 'week3_nomiss' | 'week4_nomiss' | 'week5_nomiss' | 'week6_nomiss' | 'week7_nomiss' | 'week8_nomiss' | 'week9_nomiss' | 'week10_nomiss' | 'week11_nomiss':
 						if(isStoryMode && campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 						{
 							var weekName:String = WeekData.getWeekFileName();
@@ -4462,6 +4465,14 @@ class PlayState extends MusicBeatState
 									if(achievementName == 'week6_nomiss') unlock = true;
 								case 'week7':
 									if(achievementName == 'week7_nomiss') unlock = true;
+								case 'week8':
+									if(achievementName == 'week8_nomiss') unlock = true;
+								case 'week9':
+									if(achievementName == 'week9_nomiss') unlock = true;
+								case 'week10':
+									if(achievementName == 'week10_nomiss') unlock = true;
+								case 'week11':
+									if(achievementName == 'week11_nomiss') unlock = true;
 							}
 						}
 					case 'ur_bad':
