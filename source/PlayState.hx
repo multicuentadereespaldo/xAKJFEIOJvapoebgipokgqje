@@ -4514,6 +4514,22 @@ class PlayState extends MusicBeatState
 						if(Paths.formatToSongPath(SONG.song) == 'test' && !usedPractice) {
 							unlock = true;
 						}
+					case 'training passed':
+						if(Paths.formatToSongPath(SONG.song) == 'tutorial' && !usedPractice) {
+							unlock = true;
+						}
+					case 'CG':
+						if(Paths.formatToSongPath(SONG.song) == 'city-funk' && !usedPractice) {
+							unlock = true;
+						}
+					case 'like old times':
+						if(Paths.formatToSongPath(SONG.song) == 'shoot' && !usedPractice) {
+							unlock = true;
+						}
+					case 'who is the star now?!':
+						if(Paths.formatToSongPath(SONG.song) == 'rebirth' && !usedPractice) {
+							unlock = true;
+						}
 				}
 
 				if(unlock) {
