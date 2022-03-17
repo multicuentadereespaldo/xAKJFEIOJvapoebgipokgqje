@@ -31,6 +31,10 @@ class Achievements {
 		["Rewind the cassette",				"Beat Week 9 on Hard with no Misses.",				'week9_nomiss',			false],
 		["RatTrap",				"Beat Week 10 on Hard with no Misses.",				'week10_nomiss',			false],
 		["Smashin the star",				"Beat Week 11 on Hard with no Misses.",				'week11_nomiss',			false],
+		["training passed",				"Beat tutorial.",				'training passed',			false],
+		["CG",				"Beat city-funk.",				'GG',			true],
+		["like old times",				"Beat shoot.",				'like old times',			true],
+		["who is the star now?!",				"Beat rebirth.",				'who is the star now?!',			true],
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -145,11 +149,11 @@ class AchievementObject extends FlxSpriteGroup {
 		achievementIcon.updateHitbox();
 		achievementIcon.antialiasing = ClientPrefs.globalAntialiasing;
 
-		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 20, achievementIcon.y + 16, 280, Achievements.achievementsStuff[id][0], 20);
+		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 20, achievementIcon.y + 16, 280, Achievements.achievementsStuff[id][0], 24);
 		achievementName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementName.scrollFactor.set();
 
-		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Achievements.achievementsStuff[id][1], 20);
+		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Achievements.achievementsStuff[id][1], 24);
 		achievementText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementText.scrollFactor.set();
 
