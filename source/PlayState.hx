@@ -4529,7 +4529,7 @@ class PlayState extends MusicBeatState
 							unlock = true;
 						}
 					case 'who is the star now?!':
-						if(Paths.formatToSongPath(SONG.song) == 'rebirth' && !usedPractice) {
+						if(Paths.formatToSongPath(SONG.song) == 'ievan-polkka' && !usedPractice) {
 							unlock = true;
 						}
 				}
