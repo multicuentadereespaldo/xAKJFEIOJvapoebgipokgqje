@@ -34,7 +34,7 @@ class Achievements {
 		["training passed",				"Beat tutorial.",				'training passed',			false],
 		["CG",				"Beat city-funk.",				'GG',			true],
 		["like old times",				"Beat shoot.",				'like old times',			true],
-		["who is the star now?!",				"Beat ievan-polkka.",				'who is the star now?!',			true],
+		["who is the star now?!",				"Beat Levan-polkka.",				'who is the star now?!',			true],
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -111,7 +111,7 @@ class AttachedAchievement extends FlxSprite {
 
 	public function reloadAchievementImage() {
 		if(Achievements.isAchievementUnlocked(tag)) {
-			loadGraphic(Paths.image('achievementgrid'), true, 601, 897);
+			loadGraphic(Paths.image('achievementgrid'), true, 150, 150);
 			animation.add('icon', [Achievements.getAchievementIndex(tag)], 0, false, false);
 			animation.play('icon');
 		} else {
@@ -145,16 +145,16 @@ class AchievementObject extends FlxSpriteGroup {
 		achievementIcon.animation.add('icon', [id], 0, false, false);
 		achievementIcon.animation.play('icon');
 		achievementIcon.scrollFactor.set();
-		achievementIcon.setGraphicSize(Std.int(achievementIcon.width * (3 / 4)));
+		achievementIcon.setGraphicSize(Std.int(achievementIcon.width * (3 / 3)));
 		achievementIcon.updateHitbox();
 		achievementIcon.antialiasing = ClientPrefs.globalAntialiasing;
 
-		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 24, achievementIcon.y + 16, 280, Achievements.achievementsStuff[id][0], 24);
+		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 20, achievementIcon.y + 16, 280, Achievements.achievementsStuff[id][0], 24);
 		achievementName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementName.scrollFactor.set();
 
 		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Achievements.achievementsStuff[id][1], 24);
-		achievementText.setFormat(Paths.font("vcr.ttf"), 24, FlxColor.WHITE, LEFT);
+		achievementText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementText.scrollFactor.set();
 
 		add(achievementBG);
