@@ -18,7 +18,7 @@ class Achievements {
 		["Lady Killer",					"Beat Week 4 on Hard with no Misses.",				'week4_nomiss',			false],
 		["Missless Christmas",			"Beat Week 5 on Hard with no Misses.",				'week5_nomiss',			false],
 		["Highscore!!",					"Beat Week 6 on Hard with no Misses.",				'week6_nomiss',			false],
-		["You'll Pay For That...",		"Beat Week 7 on Hard with no Misses.",				'week7_nomiss',			 true],
+		["You'll Pay For That...",		"Beat Week 7 on Hard with no Misses.",				'week7_nomiss',			false],
 		["What a Funkin' Disaster!",	"Complete a Song with a rating lower than 20%.",	'ur_bad',				false],
 		["Perfectionist",				"Complete a Song with a rating of 100%.",			'ur_good',				false],
 		["Roadkill Enthusiast",			"Watch the Henchmen die over 100 times.",			'roadkill_enthusiast',	false],
@@ -27,14 +27,14 @@ class Achievements {
 		["Just the Two of Us",			"Finish a Song pressing only two keys.",			'two_keys',				false],
 		["Toaster Gamer",				"Have you tried to run the game on a toaster?",		'toastie',				false],
 		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",	'debugger',				 true],
-		["No More Bullets",				"Beat Week 8 on Hard with no Misses.",				'week8_nomiss',			false],
-		["Rewind the cassette",				"Beat Week 9 on Hard with no Misses.",				'week9_nomiss',			false],
-		["RatTrap",				"Beat Week 10 on Hard with no Misses.",				'week10_nomiss',			false],
-		["Smashin the star",				"Beat Week 11 on Hard with no Misses.",				'week11_nomiss',			false],
-		["training passed",				"Beat tutorial.",				'training passed',			false],
-		["CG",				"Beat city-funk.",				'GG',			true],
-		["like old times",				"Beat shoot.",				'like old times',			true],
-		["who is the star now?!",				"Beat Levan-polkka.",				'who is the star now?!',			true],
+		["no more bullets",	            "Beat Week 8 on Hard with no Misses.",		    	'week8_nomiss',			false],
+		["rewind the cassette",	        "Beat Week 9 on Hard with no Misses.",		    	'week9_nomiss',			false],
+		["RatTrap",	                    "Beat Week 10 on hard with no Misses.",		        'week10_nomiss',	    false],
+		["Smashin the star",	        "Beat Week 11 on hard with no Misses.",		        'week11_nomiss',	    false],
+		["training passed",	            "Beat Tutorial.",		                            'training passed',	    false],
+		["Kassetto",	                "Beat city-funk.",		                            'city-funk',	         true],
+		["like old times",	            "Beat shoot.",		                                'like old times',	     true],
+		["who is the star now?!",	    "Beat Levan-polkka.",		                        'who is the star now?!', true]
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -145,7 +145,7 @@ class AchievementObject extends FlxSpriteGroup {
 		achievementIcon.animation.add('icon', [id], 0, false, false);
 		achievementIcon.animation.play('icon');
 		achievementIcon.scrollFactor.set();
-		achievementIcon.setGraphicSize(Std.int(achievementIcon.width * (3 / 3)));
+		achievementIcon.setGraphicSize(Std.int(achievementIcon.width * (2 / 3)));
 		achievementIcon.updateHitbox();
 		achievementIcon.antialiasing = ClientPrefs.globalAntialiasing;
 
