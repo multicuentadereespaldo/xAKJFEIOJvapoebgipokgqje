@@ -4520,7 +4520,7 @@ class PlayState extends MusicBeatState
 						if(Paths.formatToSongPath(SONG.song) == 'tutorial' && !usedPractice) {
 							unlock = true;
 						}
-					case 'CG':
+					case 'Kassetto':
 						if(Paths.formatToSongPath(SONG.song) == 'city-funk' && !usedPractice) {
 							unlock = true;
 						}
