@@ -1,4 +1,4 @@
-Zimport flixel.FlxG;
+import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.FlxCamera;
 import flixel.tweens.FlxEase;
@@ -18,7 +18,7 @@ class Achievements {
 		["Lady Killer",					"Beat Week 4 on Hard with no Misses.",				'week4_nomiss',			false],
 		["Missless Christmas",			"Beat Week 5 on Hard with no Misses.",				'week5_nomiss',			false],
 		["Highscore!!",					"Beat Week 6 on Hard with no Misses.",				'week6_nomiss',			false],
-		["You'll Pay For That...",		"Beat Week 7 on Hard with no Misses.",				'week7_nomiss',			 true],
+		["You'll Pay For That...",		"Beat Week 7 on Hard with no Misses.",				'week7_nomiss',			false],
 		["What a Funkin' Disaster!",	"Complete a Song with a rating lower than 20%.",	'ur_bad',				false],
 		["Perfectionist",				"Complete a Song with a rating of 100%.",			'ur_good',				false],
 		["Roadkill Enthusiast",			"Watch the Henchmen die over 100 times.",			'roadkill_enthusiast',	false],
@@ -27,14 +27,15 @@ class Achievements {
 		["Just the Two of Us",			"Finish a Song pressing only two keys.",			'two_keys',				false],
 		["Toaster Gamer",				"Have you tried to run the game on a toaster?",		'toastie',				false],
 		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",	'debugger',				 true],
-		["no more bullets",	            "Beat Week 8 on Hard with no Misses.",		    	'week8_nomiss',			false],
-		["rewind the cassette",	        "Beat Week 9 on Hard with no Misses.",		    	'week9_nomiss',			false],
-		["RatTrap",	                    "Beat Week 10 on hard with no Misses.",		        'week10_nomiss',	    false],
+		["no more bullets",             "Beat Week 8 on hard with no misses.",              'week8_nomiss           false],
+		["rewind the cassette",         "Beat Week 9 on hard with no misses.",              'week9_nomiss           false],
+		["RatTrap",                     "Beat Week 10 on hard with no misses.",             'week10_nomiss          false],
 		["Smashin the star",	        "Beat Week 11 on hard with no Misses.",		        'week11_nomiss',	    false],
 		["training passed",	            "Beat Tutorial.",		                            'training passed',	    false],
-		["Kassetto",	                "Beat city-funk in the chart editor.",		        'Kassetto',	             true],
-		["like old times",	            "Beat shoot the in chart editor.",		            'like old times',	     true],
-		["who is the star now?!",	    "Beat Levan-polkka in the chart editor.",		    'who is the star now?!', true],
+		["Kassetto",	                "Beat city-funk.",		                            'Kassetto',	             true],
+		["like old times",	            "Beat shoot.",		                                'like old times',	     true],
+		["who is the star now?!",	    "Beat Levan-polkka.",		                        'who is the star now?!', true],
+		["you finally have an iphone!", "Beat i-ain't-got-no-iphone.",                      'you finally have an iphone!', true],
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -149,11 +150,11 @@ class AchievementObject extends FlxSpriteGroup {
 		achievementIcon.updateHitbox();
 		achievementIcon.antialiasing = ClientPrefs.globalAntialiasing;
 
-		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 20, achievementIcon.y + 16, 280, Achievements.achievementsStuff[id][0], 24);
+		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 20, achievementIcon.y + 16, 280, Achievements.achievementsStuff[id][0],256);
 		achievementName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementName.scrollFactor.set();
 
-		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Achievements.achievementsStuff[id][1], 24);
+		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Achievements.achievementsStuff[id][1], 25);
 		achievementText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementText.scrollFactor.set();
 

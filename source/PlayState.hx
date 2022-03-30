@@ -3181,7 +3181,8 @@ class PlayState extends MusicBeatState
 				'week5_nomiss', 'week6_nomiss', 'week7_nomiss', 'ur_bad',
 				'ur_good', 'hype', 'two_keys', 'toastie', 'debugger',
 				'week8_nomiss', 'week9_nomiss', 'week10_nomiss', 'week11_nomiss',
-			    'training passed', 'CG', 'like old times', 'CG', 'who is the star now?!']);
+			    'training passed', 'Kassetto', 'like old times', 'who is the star now?!
+				'you finally have an iphone!', ']);
 
 			if(achieve != null) {
 				startAchievement(achieve);
@@ -4530,6 +4531,10 @@ class PlayState extends MusicBeatState
 						}
 					case 'who is the star now?!':
 						if(Paths.formatToSongPath(SONG.song) == 'Levan-polkka' && !usedPractice) {
+							unlock = true;
+						}
+					case 'you finally have an iphone!':
+						if(Paths.formatToSongPath(SONG.song) == 'i-ain't-got-no-iphone' && !usedPractice) {
 							unlock = true;
 						}
 				}
