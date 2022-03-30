@@ -4532,6 +4532,18 @@ class PlayState extends MusicBeatState
 						if(Paths.formatToSongPath(SONG.song) == 'Levan-polkka' && !usedPractice) {
 							unlock = true;
 						}
+					case 'lemonade':
+						if(Paths.formatToSongPath(SONG.song) == 'Monster' && !usedPractice) {
+							unlock = true;
+						}
+					case 'frozen lemonade':
+						if(Paths.formatToSongPath(SONG.song) == 'winter-horrorland' && !usedPractice) {
+							unlock = true;
+						}
+					case 'you finally have an iphone':
+						if(Paths.formatToSongPath(SONG.song) == 'i-ain't-got-no-iphone' && !usedPractice) {
+							unlock = true;
+						}
 				}
 
 				if(unlock) {

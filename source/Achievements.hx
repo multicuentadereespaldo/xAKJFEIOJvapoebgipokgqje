@@ -32,9 +32,12 @@ class Achievements {
 		["RatTrap",	                    "Beat Week 10 on hard with no Misses.",		        'week10_nomiss',	    false],
 		["Smashin the star",	        "Beat Week 11 on hard with no Misses.",		        'week11_nomiss',	    false],
 		["training passed",	            "Beat Tutorial.",		                            'training passed',	    false],
-		["Kassetto",	                "Beat city-funk.",		                            'city-funk',	         true],
-		["like old times",	            "Beat shoot.",		                                'like old times',	     true],
-		["who is the star now?!",	    "Beat Levan-polkka.",		                        'who is the star now?!', true]
+		["Kassetto",	                "Beat city-funk in the chart editor.",		        'Kassetto',	             true],
+		["like old times",	            "Beat shoot in the chart editor.",		            'like old times',	     true],
+		["who is the star now?!",	    "Beat Levan-polkka in the chart editor.",		    'who is the star now?!', true],
+		["lemonade",	                "Beat Monster.",		                            'lemonade',              false],
+		["frozen lemonade",	            "Beat winter-horrorland.",		                    'frozen lemonade',       false],
+		["you finally have an iphone",  "Beat i-ain't-got-no-iphone in the chart editor.",  'you finally have an iphone', true]
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
@@ -149,11 +152,11 @@ class AchievementObject extends FlxSpriteGroup {
 		achievementIcon.updateHitbox();
 		achievementIcon.antialiasing = ClientPrefs.globalAntialiasing;
 
-		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 20, achievementIcon.y + 16, 280, Achievements.achievementsStuff[id][0], 24);
+		var achievementName:FlxText = new FlxText(achievementIcon.x + achievementIcon.width + 20, achievementIcon.y + 16, 280, Achievements.achievementsStuff[id][0], 27);
 		achievementName.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementName.scrollFactor.set();
 
-		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Achievements.achievementsStuff[id][1], 24);
+		var achievementText:FlxText = new FlxText(achievementName.x, achievementName.y + 32, 280, Achievements.achievementsStuff[id][1], 27);
 		achievementText.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT);
 		achievementText.scrollFactor.set();
 
