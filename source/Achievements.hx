@@ -32,10 +32,10 @@ class Achievements {
 		["RatTrap",			  	        "Beat Week 10 on Hard with no Misses.",				'week10_nomiss',		false],
 		["Smashin the star",			"Beat Week 11 on Hard with no Misses.",				'week11_nomiss',		false],
 		["training passed",				"Beat tutorial.",				                    'training passed',		false],
-		["Kassetto",			     	"Beat city-funk.",			                     	'Kassetto',		         true],
-		["like old times",				"Beat shoot.",			                         	'like old times',		 true],
-		["who is the star now?!",		"Beat Levan-polkka.",		                     	'who is the star now?!', true],
-		["you finally have an iphone!",	"Beat i-ain\\'\\t-got-no-iphone.",				        'you finally have an iphone!',		true]
+		["Kassetto",			     	"Beat \"city-funk"\.",			                    'Kassetto',		         true],
+		["like old times",				"Beat \"shoot"\.",			                        'like old times',		 true],
+		["who is the star now?!",		"Beat \"Levan-polkka"\.",		                    'who is the star now?!', true],
+		["you finally have an iphone!",	"Beat \"i-ain't-got-no-iphone"\.",				    'you finally have an iphone!',		true]
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
