@@ -4503,7 +4503,6 @@ class PlayState extends MusicBeatState
 							for (j in 0...keysPressed.length) {
 								if(keysPressed[j]) howManyPresses++;
 							}
-
 							if(howManyPresses <= 2) {
 								unlock = true;
 							}
@@ -4537,7 +4536,7 @@ class PlayState extends MusicBeatState
 							unlock = true;
 						}
 				}
-					
+
 				if(unlock) {
 					Achievements.unlockAchievement(achievementName);
 					return achievementName;
