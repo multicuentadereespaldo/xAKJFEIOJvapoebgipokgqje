@@ -35,7 +35,7 @@ class Achievements {
 		["Kassetto",			     	"Beat city-funk.",			                     	'Kassetto',		         true],
 		["like old times",				"Beat shoot.",			                         	'like old times',		 true],
 		["who is the star now?!",		"Beat Levan-polkka.",		                     	'who is the star now?!', true],
-		["you finally have an iphone!",	"Beat i-ain't-got-no-iphone.",				        'you finally have an iphone!',		true]
+		["you finally have an iphone!",	"Beat i-ain\\'\\t-got-no-iphone.",				        'you finally have an iphone!',		true]
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
