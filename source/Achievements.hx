@@ -37,7 +37,7 @@ class Achievements {
 		["who is the star now?!",	    "Beat Levan-polkka in the chart editor.",		    'who is the star now?!', true],
 		["lemonade",	                "Beat Monster.",		                            'lemonade',              false],
 		["frozen lemonade",	            "Beat winter-horrorland.",		                    'frozen lemonade',       false],
-		["you finally have an iphone",  "Beat i-ain't-got-no-iphone in the chart editor.",  'you finally have an iphone', true]
+		["you finally have an iphone",  "Beat i-ain't-got-no-iphone in the chart editor.",  'you finally have an iphone', true],
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
