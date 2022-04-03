@@ -26,16 +26,16 @@ class Achievements {
 		["Hyperactive",					"Finish a Song without going Idle.",				'hype',					false],
 		["Just the Two of Us",			"Finish a Song pressing only two keys.",			'two_keys',				false],
 		["Toaster Gamer",				"Have you tried to run the game on a toaster?",		'toastie',				false],
+		["Darnell for President",		"Beat 2Hot.",				                        'Darnell for President',   false],
 		["Debugger",					"Beat the \"Test\" Stage from the Chart Editor.",	'debugger',				 true],
-		["No More Bullets",				"Beat Week 8 on Hard with no Misses.",				'week8_nomiss',			false],
-		["Rewind the cassette",			"Beat Week 9 on Hard with no Misses.",				'week9_nomiss',			false],
-		["RatTrap",			  	        "Beat Week 10 on Hard with no Misses.",				'week10_nomiss',		false],
-		["Smashin the star",			"Beat Week 11 on Hard with no Misses.",				'week11_nomiss',		false],
+		["No More Bullets",				"Beat Week 9 on Hard with no Misses.",				'week9_nomiss',			false],
+		["Rewind the cassette",			"Beat Week 10 on Hard with no Misses.",				'week10_nomiss',			false],
+		["RatTrap",			  	        "Beat Week 11 on Hard with no Misses.",				'week11_nomiss',		false],
+		["Smashin the star",			"Beat Week 12 on Hard with no Misses.",				'week12_nomiss',		false],
 		["training passed",				"Beat tutorial.",				                    'training passed',		false],
-		["Kassetto",			     	"Beat \"city-funk"\.",			                    'Kassetto',		         true],
-		["like old times",				"Beat \"shoot"\.",			                        'like old times',		 true],
-		["who is the star now?!",		"Beat \"Levan-polkka"\.",		                    'who is the star now?!', true],
-		["you finally have an iphone!",	"Beat \"i-ain't-got-no-iphone"\.",				    'you finally have an iphone!',		true]
+		["Kassetto",			     	"Beat city-funk.",			                    'Kassetto',		         true],
+		["just like the old days",				"Beat shoot.",			                        'just like the old days',		 true],
+		["who is the star now?!",		"Beat Levan-polkka.",		                    'who is the star now?!', true],
 	];
 	public static var achievementsMap:Map<String, Bool> = new Map<String, Bool>();
 
