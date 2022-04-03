@@ -3179,10 +3179,9 @@ class PlayState extends MusicBeatState
 		} else {
 			var achieve:String = checkForAchievement(['week1_nomiss', 'week2_nomiss', 'week3_nomiss', 'week4_nomiss',
 				'week5_nomiss', 'week6_nomiss', 'week7_nomiss', 'ur_bad',
-				'ur_good', 'hype', 'two_keys', 'toastie', 'debugger',
-				'week8_nomiss', 'week9_nomiss', 'week10_nomiss', 'week11_nomiss',
-			    'training passed', 'Kassetto', 'like old times', 'who is the star now?!
-				'you finally have an iphone!', ']);
+				'ur_good', 'hype', 'two_keys', 'toastie', 'debugger', 'Darnell for President', 'week9_nomiss', 'week10_nomiss', 'week11_nomiss',
+				'week12_nomiss', 'training passed', 'Kassetto', 'just like the old days',
+				'who is the star now?!']);
 
 			if(achieve != null) {
 				startAchievement(achieve);
@@ -4448,7 +4447,7 @@ class PlayState extends MusicBeatState
 				var unlock:Bool = false;
 				switch(achievementName)
 				{
-					case 'week1_nomiss' | 'week2_nomiss' | 'week3_nomiss' | 'week4_nomiss' | 'week5_nomiss' | 'week6_nomiss' | 'week7_nomiss' | 'week8_nomiss' | 'week9_nomiss' | 'week10_nomiss' | 'week11_nomiss':
+					case 'week1_nomiss' | 'week2_nomiss' | 'week3_nomiss' | 'week4_nomiss' | 'week5_nomiss' | 'week6_nomiss' | 'week7_nomiss' |'week9_nomiss' | 'week10_nomiss' | 'week11_nomiss' | 'week12_nomiss':
 						if(isStoryMode && campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 						{
 							var weekName:String = WeekData.getWeekFileName();
@@ -4468,13 +4467,13 @@ class PlayState extends MusicBeatState
 									if(achievementName == 'week6_nomiss') unlock = true;
 								case 'week7':
 									if(achievementName == 'week7_nomiss') unlock = true;
-								case 'week8':
-									if(achievementName == 'week8_nomiss') unlock = true;
 								case 'week9':
-									if(achievementName == 'week9_nomiss') unlock = true;
+									if(achievementName == 'week8_nomiss') unlock = true;
 								case 'week10':
-									if(achievementName == 'week10_nomiss') unlock = true;
+									if(achievementName == 'week9_nomiss') unlock = true;
 								case 'week11':
+									if(achievementName == 'week10_nomiss') unlock = true;
+								case 'week12':
 									if(achievementName == 'week11_nomiss') unlock = true;
 							}
 						}
@@ -4517,6 +4516,10 @@ class PlayState extends MusicBeatState
 						if(Paths.formatToSongPath(SONG.song) == 'test' && !usedPractice) {
 							unlock = true;
 						}
+					case 'Darnell for President':
+						if(Paths.formatToSongPath(SONG.song) == '2Hot' && !usedPractice) {
+							unlock = true;
+						}
 					case 'training passed':
 						if(Paths.formatToSongPath(SONG.song) == 'tutorial' && !usedPractice) {
 							unlock = true;
@@ -4531,10 +4534,6 @@ class PlayState extends MusicBeatState
 						}
 					case 'who is the star now?!':
 						if(Paths.formatToSongPath(SONG.song) == 'Levan-polkka' && !usedPractice) {
-							unlock = true;
-						}
-					case 'you finally have an iphone!':
-						if(Paths.formatToSongPath(SONG.song) == 'i-ain't-got-no-iphone' && !usedPractice) {
 							unlock = true;
 						}
 				}
