@@ -3849,6 +3849,8 @@ class PlayState extends MusicBeatState
 			}
 		}
 
+spawnNoteSplashOnDadNote(daNote);
+
 		if (SONG.needsVoices)
 			vocals.volume = 1;
 
@@ -3980,6 +3982,16 @@ class PlayState extends MusicBeatState
 	}
 
 	function spawnNoteSplashOnNote(note:Note) {
+		function spawnNoteSplashOnDadNote(note:Note) {
+        if(ClientPrefs.noteSplashes && note != null) {
+            var strum:StrumNote = strumLineNotes.members[note.noteData];
+            if(strum != null) {
+                spawnNoteSplash(strum
+.x, strum.y, note.noteData, note);
+            }
+        }
+    }
+
 		if(ClientPrefs.noteSplashes && note != null) {
 			var strum:StrumNote = playerStrums.members[note.noteData];
 			if(strum != null) {
